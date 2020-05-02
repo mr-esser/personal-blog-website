@@ -4,6 +4,7 @@ h1 {
   color: royalblue;
 }
 
+/* Layout for small and medium screens */
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -25,4 +26,13 @@ h1 {
 
 .footer {
   grid-area: ft;
+}
+
+/* Layout for large screens */
+@media(min-width:1100px) {
+  .container {
+    grid-template-columns: 75fr 25fr;
+    grid-template-rows: 15fr 80fr 5fr;
+    grid-template-areas: "hd hd" "main sd" "ft ft";
+  }
 }
