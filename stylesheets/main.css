@@ -9,12 +9,8 @@ h1, h2 {
 .page-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 150px 15fr 80fr 5fr;
+  grid-template-rows: 150px 15fr auto 5fr;
   grid-template-areas: "hd" "sd" "main" "ft";
-}
-
-.content {
-  grid-area: main;
 }
 
 .footer {
@@ -32,7 +28,7 @@ h1, h2 {
 /*  Styling for header */
 
 .header-title {
-  color: blue;
+  color: darkblue;
   grid-area: title;
 }
 
@@ -88,6 +84,7 @@ h1, h2 {
   padding: 0 0.5rem;
   grid-area: about;
   max-height: 90%;
+  max-width: 80%;
   justify-self: start;
 }
 
@@ -95,12 +92,42 @@ h1, h2 {
   margin: 0.2em 0;
 }
 
+/* Styling for content area */
+
+.content {
+  grid-area: main;
+}
+
+.content-list {
+  margin: 0;
+  padding: 0 0.5rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); 
+  /* grid-template-rows handled implicitly. */
+  grid-gap: 1rem;
+}
+
+.card {
+  margin: 0 0 1rem 0;
+  padding: 1rem
+}
+
+.meta {
+  display:flex;
+  font-size:0.8rem;
+}
+
+.duration {
+  margin-left:auto;
+}
+
 /* Layout for large screens */
 
 @media(min-width:1100px) {
   .page-grid {
     grid-template-columns: 75fr 25fr;
-    grid-template-rows: 150px 80fr 5fr;
+    grid-template-rows: 150px auto 5fr;
     grid-template-areas: "hd hd" "main sd" "ft ft";
   }
   .sidebar {
@@ -113,9 +140,13 @@ h1, h2 {
   .about-intro {
     align-self: start;
     text-align: center;
+    /* Make it stretch again */
+    max-width: 100%;
+    
   }
   .about-image {
-    /* Flip image on the x-axis to have the robot look in. */
+    /* Flip image on the x-axis to have the avatar 
+     * look in on the main content section */
     transform: scaleX(-1);
   }
 }
