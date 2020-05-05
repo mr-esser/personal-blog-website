@@ -13,9 +13,6 @@ h1, h2 {
   grid-template-areas: "hd" "sd" "main" "ft";
 }
 
-.footer {
-  grid-area: ft;
-}
 
 .header {
   grid-area: hd;
@@ -45,7 +42,7 @@ h1, h2 {
   justify-content: flex-start;
 }
 
-.header-nav-link {
+.nav-link {
   padding: 0.25rem 0.5rem;
   font-size: 1.4rem;
   max-width: 140px;
@@ -97,16 +94,20 @@ h1, h2 {
   margin: 0.4em 0; 
   padding: 4px 8px;
 }
+.social-sharing--align-right {
+  margin-left: auto;
+}
 
 .fa {
-  width: 1rem;
-  height: 1rem;
-  padding: 4px;
+  width: 0.75rem;
+  height: 0.75rem;
+  font-size: 0.75rem;
+  padding: 2px;
   color: grey;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
-  border: 2px solid darkblue;
+  border: 2px solid grey;
 }
 /* Styling for content area */
 
@@ -136,6 +137,13 @@ h1, h2 {
 
 .duration {
   margin-left:auto;
+}
+
+/* Styling for footer area */
+.footer {
+  grid-area: ft;
+  display: flex;
+  align-items: center;
 }
 
 /* Layout for large screens */
