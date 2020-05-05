@@ -76,6 +76,7 @@ h1, h2 {
 
 .about-image {
   border: 10px solid darkblue;
+  border-radius: 15%;
   grid-area: img;
   /* Limit size to never fill parent completely. Keep ratio. */
   max-width: 80%;
@@ -142,6 +143,22 @@ font-size: 1.1rem;
   font-size:1.2rem;
   font-style: italic;
   font-weight: bold;
+}
+
+.social-sharing {
+  margin: 0.4em 0; 
+  padding: 4px 8px;
+}
+
+.fa {
+  width: 1rem;
+  height: 1rem;
+  padding: 4px;
+  color: grey;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 2px solid darkblue;
 }
 /* Layout for large screens */
 

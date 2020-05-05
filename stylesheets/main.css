@@ -76,6 +76,7 @@ h1, h2 {
   /* Limit size to never fill parent completely. Keep ratio. */
   max-width: 80%;
   max-height: 90%;
+  border-radius: 12%;
 }
 
 .about-intro {
@@ -92,6 +93,21 @@ h1, h2 {
   margin: 0.2em 0;
 }
 
+.social-sharing {
+  margin: 0.4em 0; 
+  padding: 4px 8px;
+}
+
+.fa {
+  width: 1rem;
+  height: 1rem;
+  padding: 4px;
+  color: grey;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 2px solid darkblue;
+}
 /* Styling for content area */
 
 .content {
