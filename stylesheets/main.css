@@ -81,12 +81,15 @@ figcaption {
   /* Limit size to never fill parent completely. Keep ratio. */
   border-radius: 12%;
   border: 8px solid darkblue;
+  /* Center image inside the figure */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .about-intro {
   margin: 0;
   padding: 0.25rem 0.5rem;
-  grid-area: about;
   flex-basis: 130px;
   flex-grow: 1;
   justify-self: start;
@@ -170,6 +173,9 @@ figcaption {
     justify-content: center;
   }
   .about-intro {
+    /* Reduce gap between figure and intro
+     * when grid has two main columns. */
+    align-self: flex-start;
     text-align: center;
   }
   .about-image {

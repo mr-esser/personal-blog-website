@@ -7,9 +7,13 @@ h1, h2 {
 }
 
 .page-grid {
+  /* Add left and right margin for screen sizes larger than 1440px */
+  width: 96vw;
+  max-width: 1440px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 150px 15fr auto 5fr;
+  grid-template-rows: 150px auto auto 5fr;
   grid-template-areas: "hd" "sd" "main" "ft";
 }
 
@@ -66,36 +70,34 @@ h1, h2 {
 
 .sidebar {
   grid-area: sd;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "img about";
-  gap: 1rem;
-  align-items: center
+  display: flex;
+  flex-wrap: wrap;
+}
+
+figure {
+  margin-left: 4px;
+  margin-right: 4px;
+  align-self: center;
 }
 
 .about-image {
-  border: 10px solid darkblue;
+  border: 8px solid darkblue;
   border-radius: 15%;
-  grid-area: img;
-  /* Limit size to never fill parent completely. Keep ratio. */
-  max-width: 80%;
-  max-height: 90%;
-
 }
 
 .about-intro {
   /* Override default margin on p */
   margin: 0;
-  padding: 0 0.5rem;
-  grid-area: about;
-  max-height: 90%;
-  max-width: 80%;
+  padding: 0.25rem 0.5rem;
+  flex-basis: 180px;
+  flex-grow: 1;
   justify-self: start;
+  align-self: center;
 }
 
 .about-name {
-  margin: 0.2em 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Styling for content area */
@@ -109,7 +111,7 @@ h1, h2 {
   padding: 0 0.5rem;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* grid-template-rows handled implicitly. */
   grid-gap: 1rem;
 }
@@ -125,6 +127,7 @@ h1, h2 {
 }
 
 /* TODO: Style main navbar like this! */
+
 .summary::after, .date::after {
   padding: 0 8px;
   content: "\2014";
@@ -135,18 +138,18 @@ h1, h2 {
 }
 
 .post-summary {
-padding: 4px 8px;
-font-size: 1.1rem;
+  padding: 4px 8px;
+  font-size: 1.1rem;
 }
 
 .summary {
-  font-size:1.2rem;
+  font-size: 1.2rem;
   font-style: italic;
   font-weight: bold;
 }
 
 .social-sharing {
-  margin: 0.4em 0; 
+  margin: 0.4em 0;
   padding: 4px 8px;
 }
 
@@ -165,6 +168,7 @@ font-size: 1.1rem;
   border-radius: 50%;
   border: 2px solid grey;
 }
+
 /* Layout for large screens */
 
 .footer {
@@ -172,6 +176,7 @@ font-size: 1.1rem;
   display: flex;
   align-items: center;
 }
+
 @media(min-width:1100px) {
   .page-grid {
     grid-template-columns: 75fr 25fr;
@@ -179,18 +184,13 @@ font-size: 1.1rem;
     grid-template-areas: "hd hd" "main sd" "ft ft";
   }
   .sidebar {
-    grid-template-columns: 1fr;
-    grid-template-rows: 300px 300px;
-    grid-template-areas: "img" "about";
-    gap: 1rem;
-    place-items: center;
+    /* Necessary here because figure box for avatar
+       is much smaller than for full robot pic
+       on the main page. */
+    flex-direction: column;
   }
   .about-intro {
-    align-self: start;
     text-align: center;
-    /* Make it stretch again */
-    max-width: 100%;
-    
   }
   .about-image {
     /* Flip image on the x-axis to have the avatar 
