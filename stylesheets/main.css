@@ -68,8 +68,9 @@ h1, h2 {
 }
 
 figure {
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0.25rem;
+  /* Push the about text to the right a little further. */
+  margin-right: 1rem;
 }
 
 figcaption {
