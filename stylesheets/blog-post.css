@@ -171,6 +171,12 @@ figure {
   border: 2px solid grey;
 }
 
+.initials {
+  color: darkblue;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 /* Layout for large screens */
 
 .footer {
