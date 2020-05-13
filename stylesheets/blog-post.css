@@ -119,11 +119,9 @@ figure {
   padding: 4px 8px;
 }
 
-/* TODO: Style main navbar like this! */
-
 .summary::after, .date::after {
   padding: 0 8px;
-  content: "\2014";
+  content: " \2014";
 }
 
 .header-nav-item {

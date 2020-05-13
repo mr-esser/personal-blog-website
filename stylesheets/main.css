@@ -6,6 +6,10 @@ h1, h2 {
   padding: 0.25rem 0.5rem;
 }
 
+a {
+  color: darkblue;
+}
+
 .page-grid {
   /* Add left and right margin for screen sizes larger than 1440px */
   width: 96vw;
@@ -153,13 +157,30 @@ figcaption {
   padding: 1rem
 }
 
-.meta {
+.card-figure {
+  /* Use same margins as for h3 link on the side.*/
+  margin-left: 0;
+}
+
+.card-header {
   display: flex;
+  justify-items: flex-start;
+  align-items: center;
+}
+.card-avatar {
+  border-radius: 12%;
+  border: 2px solid darkblue;
+  /* Avatar should not grow too large on a card.*/
+  max-width: 50px;
+}
+
+.meta {
   font-size: 0.8rem;
 }
 
-.duration {
-  margin-left: auto;
+.summary::after, .date::after {
+  padding: 0 8px;
+  content: " \2014";
 }
 
 /* Styling for footer area */
