@@ -154,7 +154,8 @@ figcaption {
 
 .card {
   margin: 0 0 1rem 0;
-  padding: 1rem
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 darkslategrey;
 }
 
 .card-figure {
