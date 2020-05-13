@@ -32,12 +32,14 @@ h1, h2 {
 /*  Styling for header */
 
 .header-title {
-  color: darkblue;
   grid-area: title;
+  color: darkblue;
+  text-decoration: none;
 }
 
 .header-nav {
   grid-area: nav;
+  font-size: 1.4rem;
 }
 
 .header-nav-list {
@@ -46,21 +48,12 @@ h1, h2 {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: flex-start;
-}
-
-.nav-divider {
-  padding: 0.25rem 0;
-  font-size: 1.4rem;
-  font-weight: bold;
-  max-width: 140px;
-  text-decoration: none;
-  color: #333;
 }
 
 .nav-link {
   padding: 0.25rem 0.5rem;
-  font-size: 1.4rem;
   max-width: 140px;
   text-decoration: none;
   color: #333;
@@ -133,6 +126,18 @@ figure {
   content: "\2014";
 }
 
+.header-nav-item {
+  /* Prevent nested nav-links from wrapping */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-nav-item:not(:last-of-type)::after {
+  padding: 4px 0;
+  content: "/";
+}
+
 .post-body {
   padding: 4px 8px;
 }
@@ -182,6 +187,8 @@ figure {
 .footer {
   grid-area: ft;
   display: flex;
+  /* Same as in header */
+  font-size: 1.4rem;
   align-items: center;
 }
 

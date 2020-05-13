@@ -11,7 +11,6 @@ h1, h2 {
   width: 96vw;
   max-width: 1440px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 150px auto auto 50px;
@@ -29,12 +28,14 @@ h1, h2 {
 /*  Styling for header */
 
 .header-title {
-  color: darkblue;
   grid-area: title;
+  color: darkblue;
+  text-decoration: none;
 }
 
 .header-nav {
   grid-area: nav;
+  font-size: 1.4rem;
 }
 
 .header-nav-list {
@@ -43,15 +44,22 @@ h1, h2 {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: flex-start;
 }
 
 .nav-link {
   padding: 0.25rem 0.5rem;
-  font-size: 1.4rem;
   max-width: 140px;
   text-decoration: none;
   color: #333;
+}
+
+.header-nav-item {
+  /* Prevent nested nav-links from wrapping */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header-nav-item:nth-of-type(2) {
@@ -160,6 +168,8 @@ figcaption {
   grid-area: ft;
   display: flex;
   align-items: center;
+  /* Same as in top nav */
+  font-size: 1.4rem;
 }
 
 /* Layout for large screens */
