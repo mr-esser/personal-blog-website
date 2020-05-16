@@ -24,7 +24,33 @@ a {
   color: #011A5A;
 }
 
-/* Page layout for small and medium screens */
+/* Element based styles below only used on welcome page so far. */
+
+figcaption {
+  margin: 0.1rem;
+  font-size: xx-small;
+  text-align: center;
+}
+
+button {
+  border: 1px solid;
+  border-radius: 12%;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #011A5A;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 gray;
+}
+
+button:hover {
+  color: white;
+  background-color: lightslategray;
+  opacity: 50%;
+}
+
+/* +++++++++++++++++++
+ * Page layout for small and medium screens 
+ * +++++++++++++++++++ */
 
 .page-grid {
   /* Add left and right margin for screen sizes larger than 1440px */
@@ -37,7 +63,9 @@ a {
   grid-template-areas: "hd" "sd" "main" "ft";
 }
 
-/*  Styling for header */
+/* +++++++++++++++++++
+ * Styling for header
+ * +++++++++++++++++++ */
 
 .header {
   grid-area: hd;
@@ -81,4 +109,37 @@ a {
   text-decoration: none;
   color: #333;
   /* TODO: Check color */
+}
+
+/* +++++++++++++++++++
+ * Styling for sidebar
+ * +++++++++++++++++++ */
+
+.sidebar {
+  grid-area: sd;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Styles the bold headline in the descriptive text of the sidebar. */
+
+.about-name {
+  margin: 0;
+  padding: 0;
+}
+
+/* +++++++++++++++++++
+ * Social buttons (used in several places).
+ * +++++++++++++++++++ */
+
+.fa {
+  width: 0.75rem;
+  height: 0.75rem;
+  font-size: 0.75rem;
+  padding: 2px;
+  color: grey;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 2px solid grey;
 }

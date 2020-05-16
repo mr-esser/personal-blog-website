@@ -1,29 +1,28 @@
 @charset "uft-8";
 @import url("common.css");
+/* +++++++++++++++++++ 
+ * Styling for the header 
+ * +++++++++++++++++++ */
 
-/* Styling for the header */
 .header-nav-item:not(:last-of-type)::after {
   padding: 4px 0;
   content: "/";
 }
 
-/* Styling for sidebar */
-
-.sidebar {
-  grid-area: sd;
-  display: flex;
-  flex-wrap: wrap;
-}
+/* +++++++++++++++++++
+ * Styling for the sidebar
+ * +++++++++++++++++++ */
 
 figure {
   margin-left: 0.25rem;
+  /* Push the descriptive text to the right a little further. */
   margin-right: 1rem;
   align-self: center;
 }
 
 .about-image {
   border: 8px solid #011A5A;
-  border-radius: 15%;
+  border-radius: 12%;
 }
 
 .about-intro {
@@ -33,15 +32,28 @@ figure {
   flex-basis: 180px;
   flex-grow: 1;
   justify-self: start;
+  /* Center intro when stretching */
   align-self: center;
 }
 
-.about-name {
-  margin: 0;
-  padding: 0;
+/* +++++++++++++++++++ 
+ * Social sharing
+ * +++++++++++++++++++ */
+
+.social-sharing {
+  margin: 0.4em 0;
+  /* No padding for use in author section */
+  padding: 4px 0;
 }
 
-/* Styling for content area */
+.social-sharing--align-right {
+  padding: 4px 8px;
+  margin-left: auto;
+}
+
+/* +++++++++++++++++++ 
+ * Styling for content area
+ * +++++++++++++++++++ */
 
 .content {
   grid-area: main;
@@ -72,7 +84,6 @@ figure {
   content: " \2014";
 }
 
-
 .post-body {
   padding: 4px 8px;
   font-family: 'Merriweather', serif;
@@ -88,29 +99,6 @@ figure {
   font-size: 1.2rem;
   font-style: italic;
   font-weight: bold;
-}
-
-.social-sharing {
-  margin: 0.4em 0;
-  /* No padding for use in author section */
-  padding: 4px 0;
-}
-
-.social-sharing--align-right {
-  margin-left: auto;
-  padding: 4px 8px;
-}
-
-.fa {
-  width: 0.75rem;
-  height: 0.75rem;
-  font-size: 0.75rem;
-  padding: 2px;
-  color: grey;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-  border: 2px solid grey;
 }
 
 .initials {

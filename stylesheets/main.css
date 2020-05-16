@@ -1,46 +1,22 @@
 @charset "uft-8";
 @import url("common.css");
+/* +++++++++++++++++++ 
+ * Styling for the header 
+ * +++++++++++++++++++ */
 
-/* Styling for the header */
 .header-nav-item:nth-of-type(2) {
   /* Separate Home link from the rest of the nav items */
   margin-left: auto;
 }
 
-/* Styling for sidebar */
-
-.sidebar {
-  grid-area: sd;
-  display: flex;
-  flex-wrap: wrap;
-}
+/* +++++++++++++++++++
+ * Styling for the sidebar
+ * +++++++++++++++++++ */
 
 figure {
   margin-left: 0.25rem;
-  /* Push the about text to the right a little further. */
+  /* Push the descriptive text to the right a little further. */
   margin-right: 1rem;
-}
-
-figcaption {
-  margin: 0.1rem;
-  font-size: xx-small;
-  text-align: center;
-}
-
-button {
-  border: 1px solid;
-  border-radius: 12%;
-  font-size: 0.9rem;
-  font-weight: 300;
-  color: #011A5A;
-  cursor: pointer;
-  box-shadow: 0 2px 4px 0 gray;
-}
-
-button:hover {
-  color: white;
-  background-color: lightslategray;
-  opacity: 50%;
 }
 
 .about-image {
@@ -54,6 +30,7 @@ button:hover {
 }
 
 .about-intro {
+  /* Override default margin on p */
   margin: 0;
   padding: 0.25rem 0.5rem;
   flex-basis: 130px;
@@ -63,10 +40,9 @@ button:hover {
   align-self: center;
 }
 
-.about-name {
-  margin: 0;
-  padding: 0;
-}
+/* +++++++++++++++++++ 
+ * Social sharing
+ * +++++++++++++++++++ */
 
 .social-sharing {
   margin: 0.4em 0;
@@ -77,19 +53,9 @@ button:hover {
   margin-left: auto;
 }
 
-.fa {
-  width: 0.75rem;
-  height: 0.75rem;
-  font-size: 0.75rem;
-  padding: 2px;
-  color: grey;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-  border: 2px solid grey;
-}
-
-/* Styling for content area */
+/* +++++++++++++++++++ 
+ * Styling for content area
+ * +++++++++++++++++++ */
 
 .content {
   grid-area: main;
