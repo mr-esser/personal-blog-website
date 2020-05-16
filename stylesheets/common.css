@@ -16,3 +16,11 @@ h1, h2 {
   padding: 0.25rem 0.5rem;
   font-weight: 400;
 }
+
+h3 {
+  font-weight: 400;
+}
+
+a {
+  color: #011A5A;
+}

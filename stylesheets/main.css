@@ -2,14 +2,6 @@
 @import url("common.css");
 /* Layout for small and medium screens */
 
-h3 {
-  font-weight: 400;
-}
-
-a {
-  color: #011A5A;
-}
-
 .page-grid {
   /* Add left and right margin for screen sizes larger than 1440px */
   width: 96vw;
