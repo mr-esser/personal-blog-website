@@ -1,42 +1,10 @@
 @charset "uft-8";
 @import url("common.css");
 
-.header {
-  grid-area: hd;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "title" "nav";
-}
-
-/*  Styling for header */
-
-.header-title {
-  grid-area: title;
-  color: #011A5A;
-  text-decoration: none;
-}
-
-.header-nav {
-  grid-area: nav;
-  font-size: 1.4rem;
-}
-
-.header-nav-list {
-  /* Disable default margin and padding */
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-}
-
-.nav-link {
-  padding: 0.25rem 0.5rem;
-  max-width: 140px;
-  text-decoration: none;
-  color: #333;
+/* Styling for the header */
+.header-nav-item:not(:last-of-type)::after {
+  padding: 4px 0;
+  content: "/";
 }
 
 /* Styling for sidebar */
@@ -104,17 +72,6 @@ figure {
   content: " \2014";
 }
 
-.header-nav-item {
-  /* Prevent nested nav-links from wrapping */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.header-nav-item:not(:last-of-type)::after {
-  padding: 4px 0;
-  content: "/";
-}
 
 .post-body {
   padding: 4px 8px;
