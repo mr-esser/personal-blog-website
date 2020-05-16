@@ -2,17 +2,6 @@
 @import url("common.css");
 /* Layout for small and medium screens */
 
-.page-grid {
-  /* Add left and right margin for screen sizes larger than 1440px */
-  width: 96vw;
-  max-width: 1440px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 150px auto auto 50px;
-  grid-template-areas: "hd" "sd" "main" "ft";
-}
-
 .header {
   grid-area: hd;
   display: grid;
