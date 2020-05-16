@@ -41,7 +41,7 @@ h1, h2 {
 
 .header-title {
   grid-area: title;
-  color: darkblue;
+  color: #011A5A;
   text-decoration: none;
 }
 
@@ -82,7 +82,7 @@ figure {
 }
 
 .about-image {
-  border: 8px solid darkblue;
+  border: 8px solid #011A5A;
   border-radius: 15%;
 }
 
@@ -185,7 +185,7 @@ figure {
 }
 
 .initials {
-  color: darkblue;
+  color: #011A5A;
   text-decoration: underline;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;

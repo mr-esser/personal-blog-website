@@ -19,7 +19,7 @@ h3 {
 }
 
 a {
-  color: darkblue;
+  color: #011A5A;
 }
 
 .page-grid {
@@ -45,7 +45,7 @@ a {
 
 .header-title {
   grid-area: title;
-  color: darkblue;
+  color: #011A5A;
   text-decoration: none;
 }
 
@@ -98,14 +98,31 @@ figure {
 }
 
 figcaption {
+  margin: 0.1rem;
   font-size: xx-small;
   text-align: center;
+}
+
+button {
+  border: 1px solid;
+  border-radius: 12%;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #011A5A;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 gray;
+}
+
+button:hover {
+  color: white;
+  background-color: lightslategray;
+  opacity: 50%;
 }
 
 .about-image {
   /* Limit size to never fill parent completely. Keep ratio. */
   border-radius: 12%;
-  border: 8px solid darkblue;
+  border: 8px solid #011A5A;
   /* Center image inside the figure */
   margin-left: auto;
   margin-right: auto;
@@ -183,7 +200,7 @@ figcaption {
 
 .card-avatar {
   border-radius: 12%;
-  border: 2px solid darkblue;
+  border: 2px solid #011A5A;
   /* Avatar should not grow too large on a card.*/
   max-width: 50px;
 }
