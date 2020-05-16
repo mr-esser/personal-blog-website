@@ -5,3 +5,14 @@
   border: solid 1px #E80424;
 }
 
+html {
+  /* font-family: 'Merriweather', serif; */
+  font-family: 'Roboto', sans-serif;
+  /* Normal weight looks too dark and heavy. */
+  font-weight: 300;
+}
+
+h1, h2 {
+  padding: 0.25rem 0.5rem;
+  font-weight: 400;
+}
