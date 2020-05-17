@@ -58,7 +58,7 @@ figure {
 @media(min-width:1100px) {
   .page-grid {
     grid-template-columns: 75fr 25fr;
-    grid-template-rows: 150px auto 5fr;
+    grid-template-rows: 150px auto 50px;
     grid-template-areas: "hd hd" "main sd" "ft ft";
   }
   .sidebar {
