@@ -56,23 +56,13 @@ figure {
 /* Layout for large screens */
 
 @media(min-width:1100px) {
-  .page-grid {
-    grid-template-columns: 75fr 25fr;
-    grid-template-rows: 150px auto 50px;
-    grid-template-areas: "hd hd" "main sd" "ft ft";
-  }
   .sidebar {
     justify-content: center;
   }
   .about-intro {
+    text-align: center;
     /* Reduce gap between figure and intro
      * when grid has two main columns. */
     align-self: flex-start;
-    text-align: center;
-  }
-  .about-image {
-    /* Flip image on the x-axis to have the avatar 
-     * look in on the main content section */
-    transform: scaleX(-1);
   }
 }
