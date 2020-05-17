@@ -235,3 +235,15 @@ button:hover {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
+
+/* +++++++++++++++++++ 
+/* Styling for footer area
+ * +++++++++++++++++++ */
+
+.footer {
+  grid-area: ft;
+  display: flex;
+  align-items: center;
+  /* Same as in top nav */
+  font-size: 1.4rem;
+}

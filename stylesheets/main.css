@@ -53,18 +53,6 @@ figure {
   margin-left: auto;
 }
 
-/* +++++++++++++++++++ 
-/* Styling for footer area
- * +++++++++++++++++++ */
-
-.footer {
-  grid-area: ft;
-  display: flex;
-  align-items: center;
-  /* Same as in top nav */
-  font-size: 1.4rem;
-}
-
 /* Layout for large screens */
 
 @media(min-width:1100px) {
