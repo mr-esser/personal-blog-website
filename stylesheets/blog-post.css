@@ -52,63 +52,8 @@ figure {
 }
 
 /* +++++++++++++++++++ 
- * Styling for content area
+/* Styling for footer area
  * +++++++++++++++++++ */
-
-.content {
-  grid-area: main;
-}
-
-.content-list {
-  margin: 0;
-  padding: 0 0.5rem;
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* grid-template-rows handled implicitly. */
-  grid-gap: 1rem;
-}
-
-.post-title {
-  font-size: 2rem;
-  margin-block-end: 0.4em;
-}
-
-.meta-top {
-  font-size: 1rem;
-  padding: 4px 8px;
-}
-
-.summary::after, .date::after {
-  padding: 0 8px;
-  content: " \2014";
-}
-
-.post-body {
-  padding: 4px 8px;
-  font-family: 'Merriweather', serif;
-  font-weight: 300;
-}
-
-.post-summary {
-  padding: 4px 8px;
-  font-size: 1.1rem;
-}
-
-.summary {
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.initials {
-  color: #011A5A;
-  text-decoration: underline;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-}
-
-/* Layout for large screens */
 
 .footer {
   grid-area: ft;
@@ -117,6 +62,8 @@ figure {
   font-size: 1.4rem;
   align-items: center;
 }
+
+/* Layout for large screens */
 
 @media(min-width:1100px) {
   .page-grid {
