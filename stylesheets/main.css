@@ -9,19 +9,6 @@
   margin-left: auto;
 }
 
-/* +++++++++++++++++++ 
- * Social sharing
- * +++++++++++++++++++ */
-
-.social-sharing {
-  margin: 0.4em 0;
-  padding: 4px 8px;
-}
-
-.social-sharing--align-right {
-  margin-left: auto;
-}
-
 /* Layout for large screens */
 
 @media(min-width:1100px) {

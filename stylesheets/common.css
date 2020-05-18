@@ -160,6 +160,12 @@ button:hover {
  * Social buttons (used in several places).
  * +++++++++++++++++++ */
 
+.social-media {
+  /* No padding or margin. Use container for this. */
+  margin: 0;
+  padding: 0;
+}
+
 .fa {
   width: 0.75rem;
   height: 0.75rem;
@@ -274,6 +280,12 @@ button:hover {
   align-items: center;
   /* Same as in top nav */
   font-size: 1.4rem;
+}
+
+.footer-media {
+  margin: 0.4em 0;
+  padding: 4px 8px;
+  margin-left: auto;
 }
 
 /* Layout for large screens */

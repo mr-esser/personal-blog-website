@@ -9,21 +9,6 @@
   content: "/";
 }
 
-/* +++++++++++++++++++ 
- * Social sharing
- * +++++++++++++++++++ */
-
-.social-sharing {
-  margin: 0.4em 0;
-  /* No padding for use in author section */
-  padding: 4px 0;
-}
-
-.social-sharing--align-right {
-  padding: 4px 8px;
-  margin-left: auto;
-}
-
 /* Layout for large screens */
 
 @media(min-width:1100px) {
