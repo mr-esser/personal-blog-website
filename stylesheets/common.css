@@ -134,7 +134,7 @@ button:hover {
  * Styling for sidebar
  * +++++++++++++++++++ */
 
-.sidebar {
+.sidebar, .sidebar-author {
   grid-area: sd;
   display: flex;
   flex-wrap: wrap;
@@ -149,7 +149,7 @@ button:hover {
   display: block;
 }
 
-.about-intro {
+.about-intro, .about-author {
   /* Override default margin on p */
   margin: 1rem 0;
   padding: 0.25rem 0.5rem;
@@ -299,7 +299,9 @@ button:hover {
   margin-left: auto;
 }
 
-/* Layout for large screens */
+/* +++++++++++++++++++
+ * Page layout for large screens
+ * +++++++++++++++++++ */
 
 @media(min-width:1100px) {
   .page-grid {
@@ -311,5 +313,27 @@ button:hover {
     /* Flip image on the x-axis to have the avatar 
      * look in on the main content section */
     transform: scaleX(-1);
+  }
+
+  .sidebar {
+    justify-content: center;
+  }
+
+  .sidebar-author {
+    /* Necessary here because figure box for avatar
+       is much smaller than for full robot pic
+       on the main page. */
+    flex-direction: column;
+  }
+
+  .about-intro {
+    text-align: center;
+    /* Reduce gap between figure and intro
+     * when grid has two main columns. */
+    align-self: flex-start;
+  }
+
+  .about-author {
+    text-align: center;
   }
 }
