@@ -1,14 +1,5 @@
 @charset "uft-8";
 @import url("common.css");
-/* +++++++++++++++++++ 
- * Styling for the header 
- * +++++++++++++++++++ */
-
-.header-nav-item:nth-of-type(2) {
-  /* Separate Home link from the rest of the nav items */
-  margin-left: auto;
-}
-
 /* Layout for large screens */
 
 @media(min-width:1100px) {
