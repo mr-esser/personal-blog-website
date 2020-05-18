@@ -9,21 +9,6 @@
   margin-left: auto;
 }
 
-/* +++++++++++++++++++
- * Styling for the sidebar
- * +++++++++++++++++++ */
-
-.about-intro {
-  /* Override default margin on p */
-  margin: 0;
-  padding: 0.25rem 0.5rem;
-  flex-basis: 130px;
-  flex-grow: 1;
-  justify-self: start;
-  /* Center intro when stretching */
-  align-self: center;
-}
-
 /* +++++++++++++++++++ 
  * Social sharing
  * +++++++++++++++++++ */
