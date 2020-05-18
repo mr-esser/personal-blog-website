@@ -19,15 +19,6 @@ figure {
   margin-right: 1rem;
 }
 
-.about-image {
-  /* Limit size to never fill parent completely. Keep ratio. */
-  border-radius: 12%;
-  border: 8px solid #011A5A;
-  /* Center image inside the figure */
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
 
 .about-intro {
   /* Override default margin on p */

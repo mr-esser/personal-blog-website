@@ -121,8 +121,16 @@ button:hover {
   flex-wrap: wrap;
 }
 
-/* Styles the bold headline in the descriptive text of the sidebar. */
+.about-image {
+  border-radius: 12%;
+  border: 8px solid #011A5A;
+  /* Center image inside the figure */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 
+/* Styles the bold headline in the descriptive text of the sidebar. */
 .about-name {
   margin: 0;
   padding: 0;

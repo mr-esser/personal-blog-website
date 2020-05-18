@@ -20,11 +20,6 @@ figure {
   align-self: center;
 }
 
-.about-image {
-  border: 8px solid #011A5A;
-  border-radius: 12%;
-}
-
 .about-intro {
   /* Override default margin on p */
   margin: 1rem 0;
