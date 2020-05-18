@@ -24,7 +24,14 @@ a {
   color: #011A5A;
 }
 
-/* Element based styles below only used on welcome page so far. */
+/* Only element based style used on all pages */
+figure {
+  margin-left: 0.25rem;
+  /* Push the descriptive text to the right a little further. */
+  margin-right: 1rem;
+  /* Alignment primarily targets the avatar figure */
+  align-self: center;
+}
 
 figcaption {
   margin: 0.1rem;
