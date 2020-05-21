@@ -1,36 +1,30 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-.box {
-  border: solid 1px #E80424;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* font-weight 'normal' looks too dark and heavy. */
+  font-weight: lighter;
+  /* background-color: #EDF8F9; */
 }
 
-html {
-  /* font-family: 'Merriweather', serif; */
-  font-family: 'Roboto', sans-serif;
-  /* Normal weight looks too dark and heavy. */
-  font-weight: 300;
-}
-
-h1, h2 {
-  padding: 0.25rem 0.5rem;
-  font-weight: 400;
-}
-
+h1,
+h2,
 h3 {
-  font-weight: 400;
+  /* Adjusted to match body font-weight. */
+  font-weight: normal;
 }
 
 a {
-  color: #011A5A;
+  color: #011a5a;
 }
 
-/* Only element based style used on all pages */
-
 figure {
-  margin-left: 0.25rem;
+  /* Cancel margin-left. Box padding already takes care of this */
+  margin-left: 0;
   /* Push the descriptive text to the right a little further. */
   margin-right: 1rem;
-  /* Alignment primarily targets the avatar figure */
+  /* Alignment primarily targets the avatar figure which uses the same style. */
   align-self: center;
 }
 
@@ -45,15 +39,23 @@ button {
   border-radius: 12%;
   font-size: 0.9rem;
   font-weight: 300;
-  color: #011A5A;
+  color: #011a5a;
   cursor: pointer;
-  box-shadow: 0 2px 4px 0 gray;
+  box-shadow: 0 0.125rem 0.25rem 0 gray;
 }
 
 button:hover {
   color: white;
   background-color: lightslategray;
   opacity: 50%;
+}
+
+.box {
+  border: 1px solid #e80424;
+}
+
+.padding-default {
+  padding: 0.25rem 0.5rem;
 }
 
 /* +++++++++++++++++++
@@ -85,56 +87,64 @@ button:hover {
 
 .header-title {
   grid-area: title;
-  color: #011A5A;
+  color: #011a5a;
   text-decoration: none;
 }
 
 .header-nav {
   grid-area: nav;
-  font-size: 1.4rem;
 }
 
-.header-nav-list {
-  /* Disable default margin and padding */
+.nav-list {
+  /* Disable default margin and padding. */
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  /* Keep font-size here, so that it can be re-used in footer. */
+  font-size: 1.4rem;
 }
 
-.nav-root-item, .nav-item {
+/* Distinguish root and segment entries in the nav-bar to 
+ * be able to apply path separator more easily in blog post nav-bar. */
+.nav-root-item,
+.nav-item {
   /* Prevent nested nav-links from wrapping */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.nav-link {
-  padding: 0.25rem 0.5rem;
-  max-width: 140px;
-  text-decoration: none;
-  color: #333;
-  /* TODO: Check color */
+/* Separate root nav-items. */
+.nav-root-item:not(:first-of-type) {
+  margin-left: 1rem;
 }
 
+/* Separate Home link from the rest of the root(!) items. */
 .nav-root-item:nth-of-type(2) {
-  /* Separate Home link from the rest of the nav items */
   margin-left: auto;
 }
 
+/* Separate path segments in blog post nav-bar. Use to margin for consistency. */
 .nav-item::before {
-  /* Add path separator before each segment */
-  padding: 4px 0;
+  margin: 0 0.5rem;
   content: "/";
+}
+
+.nav-link {
+  max-width: 140px;
+  text-decoration: none;
+  color: #333;
 }
 
 /* +++++++++++++++++++
  * Styling for sidebar
  * +++++++++++++++++++ */
 
-.sidebar, .sidebar-author {
+.sidebar,
+.sidebar-author {
   grid-area: sd;
   display: flex;
   flex-wrap: wrap;
@@ -142,27 +152,27 @@ button:hover {
 
 .about-image {
   border-radius: 12%;
-  border: 8px solid #011A5A;
-  /* Center image inside the figure */
+  border: 8px solid #011a5a;
+  /* Center image inside the figure. */
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-.about-intro, .about-author {
-  /* Override default margin on p */
+.about-intro,
+.about-author {
+  /* Override default margin on p. */
   margin: 1rem 0;
-  padding: 0.25rem 0.5rem;
   flex-basis: 160px;
   flex-grow: 1;
   justify-self: flex-start;
-  /* Center intro when stretching */
+  /* Center intro when stretching. */
   align-self: center;
 }
 
-/* Styles the bold headline in the descriptive text of the sidebar. */
-
-.about-name {
+.about-name, /* Styles the bold headline in the descriptive text of the sidebar. */ 
+.social-media /* Styles container for social buttons. */ {
+  /* Override default padding and margin. */
   margin: 0;
   padding: 0;
 }
@@ -171,61 +181,41 @@ button:hover {
  * Social buttons (used in several places).
  * +++++++++++++++++++ */
 
-.social-media {
-  /* No padding or margin. Use container for this. */
-  margin: 0;
-  padding: 0;
-}
-
 .fa {
-  width: 0.75rem;
-  height: 0.75rem;
-  font-size: 0.75rem;
-  padding: 2px;
   color: grey;
+  font-size: 0.75rem;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  border: 0.125rem solid grey;
+  padding: 0.125rem;
   text-align: center;
   text-decoration: none;
-  border-radius: 50%;
-  border: 2px solid grey;
 }
 
 /* +++++++++++++++++++ 
  * Styling for content area
  * +++++++++++++++++++ */
 
-/* Common content styles */
-
 .content {
   grid-area: main;
 }
 
-.summary::after, .date::after {
-  padding: 0 8px;
-  content: " \2014";
-}
-
 /* Cards (welcome page) */
-
 .content-list {
-  /* Should probably be named .card-grid */
-  margin: 0;
-  padding: 0 0.5rem;
+  /* margin: Use default (1em) for clear separation of last item from the footer. */
+  /* Override default padding. */
+  padding: 0;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* grid-template-rows handled implicitly. */
-  grid-gap: 1rem;
+  /* grid-template-rows: handled implicitly. */
+  gap: 2rem 1rem;
 }
 
 .card {
-  margin: 0 0 1rem 0;
   padding: 1rem;
-  box-shadow: 0 4px 8px 0 darkslategrey;
-}
-
-.card-figure {
-  /* Use same margins as for h3 link on the side.*/
-  margin-left: 0;
+  box-shadow: 0 0.25rem 0.5rem 0 darkslategrey;
 }
 
 .card-header {
@@ -236,49 +226,48 @@ button:hover {
 
 .card-avatar {
   border-radius: 12%;
-  border: 2px solid #011A5A;
-  /* Avatar should not grow too large on a card.*/
+  border: 2px solid #011a5a;
+  /* Don't let avatar grow too large on a card.*/
   max-width: 50px;
 }
 
-.meta {
+.card-meta {
   font-size: 0.8rem;
+}
+
+.summary-keyword::after,
+.date::after {
+  padding: 0 0.5rem;
+  content: "\2014";
 }
 
 /* Blog post content */
 
 .post-title {
+  /* Extra-large heading. */
   font-size: 2rem;
-  margin-block-end: 0.4em;
-}
-
-.meta-top {
-  font-size: 1rem;
-  padding: 4px 8px;
-}
-
-.post-body {
-  padding: 4px 8px;
-  font-family: 'Merriweather', serif;
-  font-weight: 300;
+  margin-bottom: 1.2rem;
 }
 
 .post-summary {
-  padding: 4px 8px;
   font-size: 1.1rem;
 }
 
-.summary {
+.summary-keyword {
   font-size: 1.2rem;
   font-style: italic;
   font-weight: bold;
 }
 
+.post-body {
+  font-family: "Merriweather", serif;
+}
+
 .initials {
-  color: #011A5A;
+  /* font-family: "Roboto", sans-serif; */
+  font-weight: bold;
+  color: #011a5a;
   text-decoration: underline;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
 }
 
 /* +++++++++++++++++++ 
@@ -287,30 +276,21 @@ button:hover {
 
 .footer {
   grid-area: ft;
-  display: flex;
-  align-items: center;
-  /* Same as in top nav */
-  font-size: 1.4rem;
-}
-
-.footer-media {
-  margin: 0.4em 0;
-  padding: 4px 8px;
-  margin-left: auto;
 }
 
 /* +++++++++++++++++++
  * Page layout for large screens
  * +++++++++++++++++++ */
 
-@media(min-width:1100px) {
+@media (min-width: 1100px) {
   .page-grid {
     grid-template-columns: 75fr 25fr;
     grid-template-rows: 150px auto 50px;
     grid-template-areas: "hd hd" "main sd" "ft ft";
   }
+
   .about-image {
-    /* Flip image on the x-axis to have the avatar 
+    /* Flip image on the x-axis to have the robot 
      * look in on the main content section */
     transform: scaleX(-1);
   }
@@ -320,16 +300,14 @@ button:hover {
   }
 
   .sidebar-author {
-    /* Necessary here because figure box for avatar
-       is much smaller than for full robot pic
-       on the main page. */
+    /* Necessary here because figure box for avatar is much smaller 
+     * than for full robot pic on the main page. */
     flex-direction: column;
   }
 
   .about-intro {
     text-align: center;
-    /* Reduce gap between figure and intro
-     * when grid has two main columns. */
+    /* Reduce gap between figure and intro when grid has two main columns. */
     align-self: flex-start;
   }
 
