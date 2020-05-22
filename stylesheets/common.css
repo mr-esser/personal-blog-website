@@ -37,6 +37,16 @@ figcaption {
   text-align: center;
 }
 
+/* Intended to be used with a figure. */
+img {
+  border-radius: 12%;
+  border: 8px solid #011a5a;
+  /* Center image inside the figure. */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 button {
   border: 1px solid;
   border-radius: 12%;

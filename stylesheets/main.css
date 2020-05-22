@@ -64,15 +64,6 @@
   flex-wrap: wrap;
 }
 
-.about-image {
-  border-radius: 12%;
-  border: 8px solid #011a5a;
-  /* Center image inside the figure. */
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
 /* Styles are used for welcome and blog post pages respectively.
  * They are identical for screen sizes S and M, but not for L screens. */
 .about-intro,

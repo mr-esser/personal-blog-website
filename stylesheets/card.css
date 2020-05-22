@@ -1,3 +1,4 @@
+/* Styling for individual blog post cards, e.g.: as part of a list. */
 @charset "utf-8";
 
 .card {
@@ -12,8 +13,8 @@
 }
 
 .card-avatar {
-  border-radius: 12%;
-  border: 2px solid #011a5a;
+  /* Override common img border */
+  border-width: 2px;
   /* Don't let avatar grow too large on a card.*/
   max-width: 50px;
 }
