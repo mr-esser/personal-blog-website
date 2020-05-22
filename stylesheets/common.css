@@ -1,0 +1,72 @@
+/* Collection of common styles used all-over the welcome page and the blog-posts. */
+@charset "utf-8";
+/* Importing Google fonts here because this sheet sets the main font used on all pages. */
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* font-weight 'normal' looks too dark and heavy. */
+  font-weight: lighter;
+  /* background-color: #EDF8F9; */
+}
+
+h1 {
+  font-family: "Aldrich", sans-serif;
+}
+
+h2,
+h3 {
+  /* Adjusted to match body font-weight. */
+  font-weight: normal;
+}
+
+a {
+  color: #011a5a;
+}
+
+figure {
+  /* Cancel margin-left. Box padding already takes care of this */
+  margin-left: 0;
+  /* Push the descriptive text to the right a little further. */
+  margin-right: 1rem;
+  /* Alignment primarily targets the avatar figure which uses the same style. */
+  align-self: center;
+}
+
+figcaption {
+  margin: 0.1rem;
+  font-size: xx-small;
+  text-align: center;
+}
+
+button {
+  border: 1px solid;
+  border-radius: 12%;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #011a5a;
+  cursor: pointer;
+  box-shadow: 0 0.125rem 0.25rem 0 gray;
+}
+
+button:hover {
+  color: white;
+  background-color: lightslategray;
+  opacity: 50%;
+}
+
+.box {
+  border: 1px solid #e80424;
+}
+
+.pad-default {
+  padding: 0.25rem 0.5rem;
+}
+
+.delimited::after {
+  padding: 0 0.5rem;
+  content: "\2014";
+}
+
+/* .duration { unused } */
+/* .date { unused } */
