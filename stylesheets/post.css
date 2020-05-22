@@ -22,6 +22,7 @@
 }
 
 .initials {
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: #011a5a;
   text-decoration: underline;
