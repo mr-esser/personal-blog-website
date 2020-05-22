@@ -1,5 +1,5 @@
+/* Styles used in blog posts */
 @charset "utf-8";
-/* Blog post content */
 
 .post-title {
   /* Extra-large heading. */
@@ -22,7 +22,6 @@
 }
 
 .initials {
-  /* font-family: "Roboto", sans-serif; */
   font-weight: bold;
   color: #011a5a;
   text-decoration: underline;

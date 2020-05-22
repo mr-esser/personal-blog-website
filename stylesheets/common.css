@@ -1,7 +1,5 @@
 /* Collection of common styles used all-over the welcome page and the blog-posts. */
 @charset "utf-8";
-/* Importing Google fonts here because this sheet sets the main font used on all pages. */
-@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 body {
   font-family: "Roboto", sans-serif;
@@ -25,9 +23,9 @@ a {
 }
 
 figure {
-  /* Cancel margin-left. Box padding already takes care of this */
+  /* Cancel margin-left. Box padding already takes care of this. */
   margin-left: 0;
-  /* Push the descriptive text to the right a little further. */
+  /* Push non caption text to the right a little further. */
   margin-right: 1rem;
   /* Alignment primarily targets the avatar figure which uses the same style. */
   align-self: center;
