@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.card {
+  padding: 1rem;
+  box-shadow: 0 0.25rem 0.5rem 0 darkslategrey;
+}
+
+.card-header {
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.card-avatar {
+  border-radius: 12%;
+  border: 2px solid #011a5a;
+  /* Don't let avatar grow too large on a card.*/
+  max-width: 50px;
+}
+
+.card-meta {
+  font-size: 0.8rem;
+}

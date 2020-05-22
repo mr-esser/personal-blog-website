@@ -1,6 +1,8 @@
 @charset "utf-8";
 @import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 @import url("./navigation.css");
+@import url("./card.css");
+@import url("./post.css");
 
 body {
   font-family: "Roboto", sans-serif;
@@ -60,6 +62,11 @@ button:hover {
 
 .pad-default {
   padding: 0.25rem 0.5rem;
+}
+
+.delimited::after {
+  padding: 0 0.5rem;
+  content: "\2014";
 }
 
 /* +++++++++++++++++++
@@ -171,63 +178,6 @@ button:hover {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* grid-template-rows: handled implicitly. */
   gap: 2rem 1rem;
-}
-
-.card {
-  padding: 1rem;
-  box-shadow: 0 0.25rem 0.5rem 0 darkslategrey;
-}
-
-.card-header {
-  display: flex;
-  justify-items: flex-start;
-  align-items: center;
-}
-
-.card-avatar {
-  border-radius: 12%;
-  border: 2px solid #011a5a;
-  /* Don't let avatar grow too large on a card.*/
-  max-width: 50px;
-}
-
-.card-meta {
-  font-size: 0.8rem;
-}
-
-.summary-keyword::after,
-.date::after {
-  padding: 0 0.5rem;
-  content: "\2014";
-}
-
-/* Blog post content */
-
-.post-title {
-  /* Extra-large heading. */
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
-}
-
-.post-summary {
-  font-size: 1.1rem;
-}
-
-.summary-keyword {
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.post-body {
-  font-family: "Merriweather", serif;
-}
-
-.initials {
-  /* font-family: "Roboto", sans-serif; */
-  font-weight: bold;
-  color: #011a5a;
-  text-decoration: underline;
 }
 
 /* +++++++++++++++++++ 
