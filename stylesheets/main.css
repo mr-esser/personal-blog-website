@@ -3,6 +3,7 @@
 @import url("./navigation.css");
 @import url("./card.css");
 @import url("./post.css");
+@import url("./social-media.css");
 
 body {
   font-family: "Roboto", sans-serif;
@@ -68,6 +69,9 @@ button:hover {
   padding: 0 0.5rem;
   content: "\2014";
 }
+
+/* .duration { unused } */
+/* .date { unused } */
 
 /* +++++++++++++++++++
  * Page layout for small and medium screens 
@@ -137,27 +141,11 @@ button:hover {
   align-self: center;
 }
 
-.about-name, /* Styles the bold headline in the descriptive text of the sidebar. */ 
-.social-media /* Styles container for social buttons. */ {
+/* Styles the bold headline in the descriptive text of the sidebar. */
+.about-name ‚{
   /* Override default padding and margin. */
   margin: 0;
   padding: 0;
-}
-
-/* +++++++++++++++++++
- * Social buttons (used in several places).
- * +++++++++++++++++++ */
-
-.fa {
-  color: grey;
-  font-size: 0.75rem;
-  height: 0.75rem;
-  width: 0.75rem;
-  border-radius: 50%;
-  border: 0.125rem solid grey;
-  padding: 0.125rem;
-  text-align: center;
-  text-decoration: none;
 }
 
 /* +++++++++++++++++++ 
