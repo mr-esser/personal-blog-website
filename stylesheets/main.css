@@ -99,6 +99,7 @@
   /* Override default padding. */
   padding: 0;
   list-style: none;
+
   display: grid;
   /* Calculate no of columns based on no of items that fit into the containers horizontal space. */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
