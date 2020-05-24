@@ -351,3 +351,6 @@ MigrationBackup/
 
 ## Excludes for MacOS
 .DS_Store
+
+## Excluces for VSCode
+*.code-workspace
