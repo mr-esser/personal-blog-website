@@ -5,7 +5,7 @@ body {
   font-family: "Roboto", sans-serif;
   /* font-weight 'normal' looks too dark and heavy. */
   font-weight: lighter;
-  background-color: #EDF8F9;
+  background-color: #edf8f9;
 }
 
 h1 {
@@ -54,7 +54,7 @@ button {
   font-weight: lighter;
   color: #011a5a;
   /* Does not pick up the body's bg color automatically. */
-  background-color: #EDF8F9;
+  background-color: #edf8f9;
   cursor: pointer;
   box-shadow: 0 0.125rem 0.25rem 0 gray;
 }
@@ -65,8 +65,9 @@ button:hover {
   opacity: 50%;
 }
 
+/* Define common border look for main sections. Especially the color. */
 .box {
-  border: 1px solid #e80424;
+  border: 0 solid #e80424;
 }
 
 .pad-default {

@@ -32,6 +32,8 @@
 
 .header {
   grid-area: head;
+  /* Enable bottom border with default style and color. */
+  border-width: 0 0 2px 0;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -110,6 +112,8 @@
 
 .footer {
   grid-area: foot;
+  /* Enable top border with default style and color. */
+  border-width: 2px 0 0 0;
 }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++
@@ -117,6 +121,11 @@
  * ++++++++++++++++++++++++++++++++++++++++++++++ */
 
 @media (min-width: 1100px) {
+  /* Box all sections on large screens. Looks akward, otherwise. */
+  .box {
+    border-width: 1px;
+  }
+
   .page-grid {
     grid-template-columns: 75fr 25fr;
     grid-template-rows: 150px auto 50px;
