@@ -8,10 +8,13 @@
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++
  * General page layout for small and medium screens 
+ * Heavily inspired by content from Udacity, 
+ * Rachel Andrew's personal website (https://rachelandrew.co.uk) 
+ * and Wait But Why (https://waitbutwhy.com).
  * ++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .page-grid {
-  /* Add left and right margin for screen sizes larger than 1440px */
+  /* Add left and right margin for screen sizes larger than 1440px. */
   width: 96vw;
   max-width: 1440px;
   margin: 0 auto;
@@ -102,7 +105,7 @@
 
   display: grid;
   /* Calculate no of columns based on no of items that fit into the containers horizontal space.
-     Thanks to Sara Soueidan on CSS Tricks for this neat little trick.
+     Thanks to Sara Soueidan on CSS Tricks for explaining this neat little trick.
      See: https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ (29 Apr 2019)
   */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

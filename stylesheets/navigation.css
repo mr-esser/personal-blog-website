@@ -23,6 +23,9 @@
 }
 
 /* Separate root nav-items. */
+/* Thanks to Per Harald Borgen on hackernoon for this handy trick.
+   See: https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf (7 Dec 2017) 
+ */
 .nav-root-item:not(:first-of-type) {
   margin-left: 1rem;
 }
