@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* Importing fontawesome here (insted of linking from .html) because styles below are tied to it and it is DRYer. */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.social-media {
+  /* Override default padding and margin. */
+  margin: 0;
+  padding: 0;
+}
+
+/* fontawesome general style for icons. */
+.fa {
+  color: grey;
+  font-size: 0.75rem;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  border: 0.125rem solid grey;
+  padding: 0.125rem;
+  text-align: center;
+  text-decoration: none;
+}

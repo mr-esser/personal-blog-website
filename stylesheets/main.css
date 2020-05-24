@@ -1,0 +1,164 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("./common.css");
+@import url("./navigation.css");
+@import url("./card.css");
+@import url("./post.css");
+@import url("./social-media.css");
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++
+ * General page layout for small and medium screens 
+ * ++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.page-grid {
+  /* Add left and right margin for screen sizes larger than 1440px */
+  width: 96vw;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px auto auto 50px;
+  grid-template-areas:
+    "head"
+    "side"
+    "main"
+    "foot";
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++
+ * Styling for page header
+ * ++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.header {
+  grid-area: head;
+  /* Enable bottom border with default style and color. */
+  border-width: 0 0 2px 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "title"
+    "nav";
+}
+
+.header-title {
+  grid-area: title;
+  color: #011a5a;
+  text-decoration: none;
+}
+
+.header-nav {
+  grid-area: nav;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++
+ * Styling for sidebar
+ * ++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Styles are used for welcome and blog post pages respectively.
+ * They are identical for screen sizes S and M, but not for L screens. */
+.sidebar,
+.sidebar-author {
+  grid-area: side;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Styles are used for welcome and blog post pages respectively.
+ * They are identical for screen sizes S and M, but not for L screens. */
+.about-intro,
+.about-author {
+  /* Override default margin on p. */
+  margin: 1rem 0;
+  flex-basis: 160px;
+  flex-grow: 1;
+  justify-self: flex-start;
+  /* Center intro when stretching. */
+  align-self: center;
+}
+
+.about-name {
+  /* Standard padding and margin would waste too much space. */
+  margin: 0;
+  padding: 0;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++
+ * Styling for content area
+ * ++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.content {
+  grid-area: main;
+}
+
+/* List of cards (welcome page) */
+.content-list {
+  /* margin: Stick with default (1em) for clear separation of last item from the footer. */
+  /* Override default padding. */
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  /* Calculate no of columns based on no of items that fit into the containers horizontal space. */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-rows: handled implicitly. */
+  gap: 2rem 1rem;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++
+/* Styling for footer area
+ * ++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.footer {
+  grid-area: foot;
+  /* Enable top border with default style and color. */
+  border-width: 2px 0 0 0;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++
+ * Page layout for large screens
+ * ++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media (min-width: 1100px) {
+  /* Box all sections on large screens. Looks akward, otherwise. */
+  .box {
+    border-width: 1px;
+  }
+
+  .page-grid {
+    grid-template-columns: 75fr 25fr;
+    grid-template-rows: 150px auto 50px;
+    grid-template-areas:
+      "head head"
+      "main side"
+      "foot foot";
+  }
+
+  .about-image {
+    /* Flip image on the x-axis to have the figure look in 
+     * on the main content section */
+    transform: scaleX(-1);
+  }
+
+  .sidebar {
+    justify-content: center;
+  }
+
+  .sidebar-author {
+    /* Necessary here because figure box for avatar is much smaller 
+     * than for full pic on the main page. */
+    flex-direction: column;
+  }
+
+  .about-intro {
+    text-align: center;
+    /* Reduce gap between figure and intro when grid has two main columns. */
+    align-self: flex-start;
+  }
+
+  .about-author {
+    text-align: center;
+  }
+}

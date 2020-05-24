@@ -1,0 +1,29 @@
+/* Styles used in blog posts */
+@charset "utf-8";
+
+.post-title {
+  /* Extra-large heading. */
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.post-summary {
+  font-size: 1.1rem;
+}
+
+.summary-keyword {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.post-body {
+  font-family: "Merriweather", serif;
+}
+
+.initials {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #011a5a;
+  text-decoration: underline;
+}

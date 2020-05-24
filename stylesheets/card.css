@@ -1,0 +1,25 @@
+/* Styling for individual blog post cards, e.g.: as part of a list. */
+@charset "utf-8";
+
+.card {
+  border-width: 1px;
+  padding: 1rem;
+  box-shadow: 0 0.25rem 0.5rem 0 darkslategrey;
+}
+
+.card-header {
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.card-avatar {
+  /* Override common img border */
+  border-width: 2px;
+  /* Don't let avatar grow too large on a card.*/
+  max-width: 50px;
+}
+
+.card-meta {
+  font-size: 0.8rem;
+}

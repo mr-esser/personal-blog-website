@@ -1,0 +1,83 @@
+/* Collection of common styles used all-over the welcome page and the blog-posts. */
+@charset "utf-8";
+
+body {
+  font-family: "Roboto", sans-serif;
+  /* font-weight 'normal' looks too dark and heavy. */
+  font-weight: lighter;
+  background-color: #edf8f9;
+}
+
+h1 {
+  font-family: "Aldrich", sans-serif;
+}
+
+h2,
+h3 {
+  /* Adjusted to match body font-weight. */
+  font-weight: normal;
+}
+
+a {
+  color: #011a5a;
+}
+
+figure {
+  /* Cancel margin-left. Box padding already takes care of this. */
+  margin-left: 0;
+  /* Push non caption text to the right a little further. */
+  margin-right: 1rem;
+  /* Alignment primarily targets the avatar figure which uses the same style. */
+  align-self: center;
+}
+
+figcaption {
+  margin: 0.1rem;
+  font-size: xx-small;
+  text-align: center;
+}
+
+/* Intended to be used with a figure. */
+img {
+  border-radius: 12%;
+  border: 8px solid #011a5a;
+  /* Center image inside the figure. */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+button {
+  border: 1px solid;
+  border-radius: 12%;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  color: #011a5a;
+  /* Does not pick up the body's bg color automatically. */
+  background-color: #edf8f9;
+  cursor: pointer;
+  box-shadow: 0 0.125rem 0.25rem 0 gray;
+}
+
+button:hover {
+  color: white;
+  background-color: lightslategray;
+  opacity: 50%;
+}
+
+/* Define common border look for main sections. Especially the color. */
+.box {
+  border: 0 solid #e80424;
+}
+
+.pad-default {
+  padding: 0.25rem 0.5rem;
+}
+
+.delimited::after {
+  padding: 0 0.5rem;
+  content: "\2014";
+}
+
+/* .duration { unused } */
+/* .date { unused } */
