@@ -101,7 +101,10 @@
   list-style: none;
 
   display: grid;
-  /* Calculate no of columns based on no of items that fit into the containers horizontal space. */
+  /* Calculate no of columns based on no of items that fit into the containers horizontal space.
+     Thanks to Sara Soueidan on CSS Tricks for this neat little trick.
+     See: https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ (29 Apr 2019)
+  */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* grid-template-rows: handled implicitly. */
   gap: 2rem 1rem;
